@@ -1,0 +1,1 @@
+CONFIG="-n --file=/etc/pulse/motorola_falcon_000b.pa"

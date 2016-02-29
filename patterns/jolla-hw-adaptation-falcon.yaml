@@ -69,11 +69,14 @@ Requires:
 - jolla-settings-layout
 
 # For devices with working cellular modem:
-#- pattern:jolla-sailfish-cellular-apps
-#- telepathy-ring
+- pattern:jolla-sailfish-cellular-apps
+- telepathy-ring
 
 # For devices where test_gps eventually gets a fix:
-#- geoclue-provider-hybris-community
+- geoclue-provider-hybris-community
+
+#Some glue for audio in calls
+- pulseaudio-modules-droid-glue
 
 Summary: Jolla HW Adaptation falcon
 
