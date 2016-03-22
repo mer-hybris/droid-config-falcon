@@ -16,6 +16,7 @@ Requires:
 - droid-config-falcon-policy-settings
 - droid-config-falcon-preinit-plugin
 - droid-hal-version-falcon
+- droid-hal-falcon-detritus
 
 - pulseaudio-modules-droid
 # for audio recording to work:
