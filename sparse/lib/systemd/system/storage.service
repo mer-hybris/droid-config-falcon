@@ -1,0 +1,11 @@
+[Unit]
+Description=link Storage
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/droid/load-storage.sh
+ExecStop=/usr/bin/droid/unload-storage.sh
+
+[Install]
+WantedBy=graphical.target
