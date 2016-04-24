@@ -1,11 +1,10 @@
 [Unit]
-Description=link Storage
+Description=Link android storage for nemo user
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/droid/load-storage.sh
-ExecStop=/usr/bin/droid/unload-storage.sh
 
 [Install]
 WantedBy=graphical.target
