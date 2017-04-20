@@ -4,10 +4,6 @@
 Description: Pattern with packages for falcon HW Adaptation
 Name: jolla-hw-adaptation-falcon
 Requires:
-- pattern:jolla-hw-adaptation-hybris
-- pattern:jolla-hw-adaptation-hybris-droid-vibrator
-- pattern:jolla-ui-configuration-falcon
-
 - droid-hal-falcon
 - droid-hal-falcon-img-boot
 - droid-hal-falcon-kernel-modules
@@ -18,6 +14,18 @@ Requires:
 - droid-hal-version-falcon
 - droid-hal-falcon-detritus
 
+# Hybris packages
+- libhybris-libEGL
+- libhybris-libGLESv2
+- libhybris-libwayland-egl
+
+# Sensors
+- hybris-libsensorfw-qt5
+
+# Needed for /dev/touchscreen symlink
+- qt5-plugin-generic-evdev
+
+
 - pulseaudio-modules-droid
 # for audio recording to work:
 - qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
@@ -26,12 +34,6 @@ Requires:
 - qt5-qtwayland-wayland_egl
 - qt5-qpa-hwcomposer-plugin
 - qtscenegraph-adaptation
-
-# GStreamer v0.10 multimedia support is being deprecated
-#- gstreamer0.10-droidcamsrc
-#- gstreamer0.10-omx
-#- gstreamer0.10-droideglsink
-#- nemo-qtmultimedia-plugins-gstvideotexturebackend
 
 # Add GStreamer v1.0 as standard
 - gstreamer1.0
@@ -50,7 +52,6 @@ Requires:
 - usb-moded
 - usb-moded-defaults-android
 - usb-moded-developer-mode-android
-- usb-moded-pc-suite-mode-android
 
 # Extra useful modes not officially supported:
 # might need some configuration to get working
@@ -60,10 +61,6 @@ Requires:
 # android diag mode only usable for certain android tools
 - usb-moded-diag-mode-android
 
-# from update13, this is needed explicitly
-#- bluez-configs-sailfish
-# configurations for OBEX
-- obexd-configs-sailfish
 # hammerhead, grouper, and maguro use this in scripts, so include for all
 - rfkill
 

@@ -10,4 +10,13 @@
 
 # We assume most devices will
 %define have_modem 1
+
+Provides: bluez-configs
+Conflicts: bluez-configs-sailfish
+Obsoletes: bluez-configs-sailfish
+
+Provides: obexd-configs
+Conflicts: obexd-configs-sailfish
+Obsoletes: obexd-configs-sailfish
+ 
 %include droid-configs-device/droid-configs.inc
