@@ -4,6 +4,9 @@
 Description: Pattern with packages for falcon HW Adaptation
 Name: jolla-hw-adaptation-falcon
 Requires:
+- pattern:jolla-hw-adaptation-hybris
+- pattern:jolla-hw-adaptation-hybris-droid-vibrator
+
 - droid-hal-falcon
 - droid-hal-falcon-img-boot
 - droid-hal-falcon-kernel-modules
