@@ -1,12 +1,6 @@
-# Feel free to disable non-critical HA parts during devel by commenting lines out
-# Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
-
 Description: Pattern with packages for falcon HW Adaptation
 Name: jolla-hw-adaptation-falcon
 Requires:
-- pattern:jolla-hw-adaptation-hybris
-- pattern:jolla-hw-adaptation-hybris-droid-vibrator
-
 - droid-hal-falcon
 - droid-hal-falcon-img-boot
 - droid-hal-falcon-kernel-modules
@@ -14,6 +8,8 @@ Requires:
 - droid-config-falcon-pulseaudio-settings
 - droid-config-falcon-policy-settings
 - droid-config-falcon-preinit-plugin
+- droid-config-falcon-flashing
+- droid-config-falcon-bluez4
 - droid-hal-version-falcon
 - droid-hal-falcon-detritus
 
@@ -24,6 +20,10 @@ Requires:
 
 # Sensors
 - hybris-libsensorfw-qt5
+
+# Vibra
+- ngfd-plugin-droid-vibrator
+- qt5-feedback-haptics-droid-vibrator
 
 # Needed for /dev/touchscreen symlink
 - qt5-plugin-generic-evdev
@@ -70,14 +70,7 @@ Requires:
 # enable device lock and allow to select untrusted software
 - jolla-devicelock-plugin-encsfa
 
-# Settings app needs this since update15
-- jolla-settings-layout
-
-# For devices with working cellular modem:
-- pattern:jolla-sailfish-cellular-apps
-- telepathy-ring
-
-# For devices where test_gps eventually gets a fix:
+# For GPS
 - geoclue-provider-hybris
 
 #Some glue for audio in calls
