@@ -5,10 +5,10 @@ Description: Pattern with packages for falcon configurations
 Name: jolla-configuration-falcon
 Requires:
 - pattern:jolla-hw-adaptation-falcon
-- pattern:jolla-sailfish-applications
-- pattern:jolla-ui-wayland
+- patterns-sailfish-applications
+- patterns-sailfish-ui
 # For devices with cellular modem. Those without one, please comment out:
-- pattern:jolla-sailfish-cellular-apps
+- patterns-sailfish-cellular-apps
 # Early stages of porting benefit from these:
 - pattern:sailfish-porter-tools
 
@@ -20,6 +20,7 @@ Requires:
 # Introduced starting Sailfish OS 2.0.4.x:
 # 3rd party accounts like Twitter, VK, cloud services, etc
 - jolla-settings-accounts-extensions-3rd-party-all
+- patterns-sailfish-consumer-generic
 
 # For Mozilla location services (online)
 - geoclue-provider-mlsdb
